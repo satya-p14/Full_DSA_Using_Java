@@ -1,5 +1,13 @@
 Write a program that asks the user to input a number T, indicating the number of test cases.
 Then, for each test case, ask for input a number N and print the first and last digits of N.
+Input :
+    2
+    10023
+    1589
+
+Output :
+    1 3
+    1 9
 
 public static void main(String[] args) {
   // YOUR CODE GOES HERE
