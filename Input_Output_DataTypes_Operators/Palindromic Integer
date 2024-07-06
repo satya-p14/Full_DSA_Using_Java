@@ -1,0 +1,28 @@
+You are given an integer A as input and you need to determine whether it is a palindrome or not.
+A palindrome integer is one whose digits, when reversed, result in the same number.
+For example, 121 is a palindrome because its reverse is also 121, but 123 is not a palindrome because its reverse is 321.
+
+Note: The given integer will not have any leading zeros.
+
+
+public static void main(String[] args) {
+    // YOUR CODE GOES HERE
+    // Please take input and print output to standard input/output (stdin/stdout)
+    // DO NOT USE ARGUMENTS FOR INPUTS
+    // E.g. 'Scanner' for input & 'System.out' for output
+
+    Scanner scn = new Scanner(System.in);
+    int inputNum = scn.nextInt();
+    int reversedNum = 0;
+    int originalNum = inputNum;
+    while(inputNum != 0 ){
+        int r = inputNum % 10;
+        reversedNum = reversedNum * 10 + r;
+        inputNum = inputNum / 10;
+    }
+    if(originalNum==reversedNum)
+        System.out.println("Yes");
+    else
+        System.out.println("No");
+    
+}
