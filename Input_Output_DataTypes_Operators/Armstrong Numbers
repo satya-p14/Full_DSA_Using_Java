@@ -1,0 +1,32 @@
+You are given an integer N you need to print all the Armstrong Numbers between 1 to N. (N inclusive).
+If sum of cubes of each digit of the number is equal to the number itself, then the number is called an Armstrong number.
+For example, 153 = ( 1 * 1 * 1 ) + ( 5 * 5 * 5 ) + ( 3 * 3 * 3 ).
+Note: All the test cases in this problem are limited to 3 digit numbers.
+
+public static void main(String[] args) {
+    // YOUR CODE GOES HERE
+    // Please take input and print output to standard input/output (stdin/stdout)
+    // DO NOT USE ARGUMENTS FOR INPUTS
+    // E.g. 'Scanner' for input & 'System.out' for output
+
+    Scanner scanner = new Scanner(System.in);
+    int inputNum = scanner.nextInt();
+    scanner.close();
+    int numTemp, lastDigit, sum = 0;
+    for(int i = 1; i <= inputNum; i++)
+    {
+        numTemp = i;
+        while(numTemp > 0)
+        {
+            lastDigit = numTemp % 10;
+            sum = sum + (lastDigit * lastDigit * lastDigit);
+            numTemp = numTemp / 10;
+        }
+        if(sum == i)
+        {
+            System.out.println(i);
+        }
+        sum = 0;
+    }    
+}
+
