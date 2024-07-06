@@ -1,0 +1,28 @@
+Write a program that asks the user to input a number T, indicating the number of test cases.
+Then, for each test case, ask for input a number N and print the first and last digits of N.
+
+public static void main(String[] args) {
+  // YOUR CODE GOES HERE
+  // Please take input and print output to standard input/output (stdin/stdout)
+  // DO NOT USE ARGUMENTS FOR INPUTS
+  // E.g. 'Scanner' for input & 'System.out' for output
+
+  Scanner scn = new Scanner(System.in);
+  int testCases = scn.nextInt();
+  int firstDigit = 0;
+  int lastDigit = 0;
+  for(int i = 1 ; i <= testCases ; i++){           
+      int inputNum = scn.nextInt();
+      if(inputNum < 10){
+          lastDigit = inputNum;
+          firstDigit = inputNum;                
+      }else{
+          lastDigit = inputNum % 10;
+          while (inputNum >= 10){
+              inputNum = inputNum / 10;
+              firstDigit = inputNum;
+          }
+      }
+      System.out.println(firstDigit + " " + lastDigit);
+  }      
+}
