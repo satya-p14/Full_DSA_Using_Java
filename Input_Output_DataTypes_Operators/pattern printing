@@ -40,4 +40,56 @@ public static void main(String[] args) {
 
 ---------------------------------------------------------
 
-3.  
+3.  Inverted Half Pyramid
+    Given an integer N, print the corresponding Inverted Half Pyramid pattern for N.
+    
+    For example if N = 4 then pattern will be like:
+    
+    ****
+    ***
+    **
+    *
+
+for(int i = row ; i >= 1 ; i--)        {
+    for(int j = 1 ; j <= i ; j++)            {
+        System.out.print("*");
+    }
+    System.out.println("");
+}
+
+-------------------------------------------------------------------
+
+4. Two Line Star Pattern
+    Print a pattern consisting of N rows, where each row contains an asterisk (*) at the beginning and end of the line, 
+    with N-2 spaces in between.
+    
+    The Pattern should look like:
+    
+    *<N-2 Spaces>*
+    
+    Print the above pattern for a total of N Rows.
+
+
+Scanner scanner = new Scanner(System.in);
+int inputNum = scanner.nextInt();
+scanner.close();
+int space = inputNum - 2;
+for(int i = 1 ; i <= inputNum ; i++){
+    for(int j = 1 ; j <= inputNum ; j++){
+        if(j == 1  || j == inputNum ){
+            System.out.print("*");
+        }else{
+            System.out.print(" ");
+        }
+    }
+    System.out.println();
+}
+
+
+
+
+
+
+
+
+
