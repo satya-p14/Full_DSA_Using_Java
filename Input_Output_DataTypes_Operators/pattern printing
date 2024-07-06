@@ -85,6 +85,139 @@ for(int i = 1 ; i <= inputNum ; i++){
     System.out.println();
 }
 
+-------------------------------------------------
+
+5. Leading spaces pyramid
+
+Take an integer N as input, print the corresponding pattern for N.
+
+For example if N = 5 then pattern will be like:
+
+____*
+___**
+__***
+_****
+*****
+Note : Here '_' represents space for explanation purpose only. You have to print space in your code.
+
+public void  LeadingSpacesPyramid(int num){
+    for(int i = 1 ; i <= num ; i++ ){
+        for(int j = i ; j <= num -1 ; j++ ){
+            System.out.print(" ");
+        }
+        for(int j = 1 ; j <= i ; j++ ){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
+
+------------------------------------------------------
+
+6. Hollow inverted pyramid pattern
+Take an integer N as input, print the corresponding pattern for N.
+
+For example if N = 5 then pattern will be like:
+
+*________* // 8 spaces
+
+**______** // 6 spaces
+
+***____*** // 4 spaces
+
+****__**** // 2 spaces
+
+********** // 0 spaces
+
+NOTE: Here '_' is used to represent spaces. You have to print spaces in your code.
+
+
+public void HollowInvertedPyramidPattern(int num){
+    for(int i = 1 ; i <= num ; i++) {
+        for(int j = 1 ; j <= i ; j++){
+            System.out.print("*");
+        }
+        for(int j = 1 ; j <= 2 * (num-i) ; j++){
+            System.out.print(" ");
+        }
+        for(int j = 1 ; j <= i ; j++){
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
+}
+
+-----------------------------------------------------
+
+7. Hollow pyramid pattern
+
+Take an integer N as input, print the corresponding pattern for N.
+
+For example if N = 5 then pattern will be like:
+
+********** // 0 spaces
+
+****__**** // 2 spaces
+
+***____*** // 4 spaces
+
+**______** // 6 spaces
+
+*________* // 8 spaces
+NOTE: Here '_' is used to represent spaces. You have to print spaces in your code.
+
+
+
+public void HollowPyramidpattern(int num){
+    for(int i = num ; i >= 1 ; i--) {
+        for(int j = i ; j >= 1 ; j--){
+            System.out.print("*");
+        }
+        for(int j = 1 ; j <= 2 * (num - i) ; j++){
+            System.out.print(" ");
+        }
+        for(int j = i ; j >= 1 ; j--){
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
+}
+
+--------------------------------------------------
+8. FullPyramid
+Take an integer N, print the corresponding Full Pyramid pattern for N.
+
+For example if N = 5 then pattern will be like:
+
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+NOTE: There should be exactly one extra space after each * for each row.
+
+public void FullPyramid(int num){
+    for(int i = 1 ; i <= num ; i++) {
+        for(int j = num - i ; j >= 1 ; j--){
+            System.out.print(" ");
+        }
+        for(int j = 1 ; j <= i  ; j++){
+            System.out.print("* ");
+        }
+        System.out.println();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
