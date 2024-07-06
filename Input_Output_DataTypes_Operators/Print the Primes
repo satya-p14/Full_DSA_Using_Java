@@ -1,0 +1,27 @@
+You are given an integer N you need to print all the Prime Numbers between 1 and N.
+
+Prime numbers are numbers that have only 2 factors: 1 and themselves. For example, the first 5 prime numbers are 2, 3, 5, 7, and 11.
+
+public static void main(String[] args) {
+    // YOUR CODE GOES HERE
+    // Please take input and print output to standard input/output (stdin/stdout)
+    // DO NOT USE ARGUMENTS FOR INPUTS
+    // E.g. 'Scanner' for input & 'System.out' for output
+
+    Scanner scanner = new Scanner(System.in);
+    int inputNum = scanner.nextInt();
+    scanner.close();
+    int i, j, flg;
+    for(i = 2 ; i <= inputNum ; i++){
+        flg = 1;
+        for(j = 2 ; j <= i / 2  ; j++){
+            if (i % j == 0) {
+                flg = 0;
+                break;
+            }
+        }
+        if (flg == 1){
+            System.out.println(i);
+        }
+    }        
+}
