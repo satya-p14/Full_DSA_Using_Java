@@ -1,5 +1,7 @@
 Take an input of a number A from the user. Print all perfect squares less than or equal to A.
-Note - Perfect squares are integers whose square root is an integer. (For Example: 16 is perfect square as √16 = 4, or 42 = 16)
+Note - Perfect squares are integers whose square root is an integer. (For Example: 16 is perfect square as √16 = 4, or 42 = 16).
+Input : 20
+Output : 1 4 9 16
 
 
 public static void main(String[] args) {
