@@ -1,0 +1,17 @@
+Take an input of a number A from the user. Print all perfect squares less than or equal to A.
+Note - Perfect squares are integers whose square root is an integer. (For Example: 16 is perfect square as √16 = 4, or 42 = 16)
+
+
+public static void main(String[] args) {
+    // YOUR CODE GOES HERE
+    // Please take input and print output to standard input/output (stdin/stdout)
+    // DO NOT USE ARGUMENTS FOR INPUTS
+    // E.g. 'Scanner' for input & 'System.out' for output
+    Scanner scn = new Scanner(System.in);
+    int inputNum = scn.nextInt();
+    int initalNum = 1;
+    while(inputNum >= initalNum * initalNum){
+        System.out.print(initalNum * initalNum + " ");
+        initalNum = initalNum + 1;
+    }        
+}
