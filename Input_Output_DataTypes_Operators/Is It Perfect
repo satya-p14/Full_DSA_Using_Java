@@ -1,0 +1,42 @@
+Given the Number of Test Cases as T,
+For each test case, take an integer N as input, you have to tell whether it is a perfect number or not.
+
+A perfect number is a positive integer that is equal to the sum of its proper positive divisors (excluding the number itself). 
+A positive proper divisor divides a number without leaving any remainder.
+
+Input 1:
+2
+4
+6
+
+Output 1:
+NO
+YES 
+
+Explanation 1:
+For the first test case A = 4, the answer is "NO" as sum of its proper divisors = 1 + 2 = 3, is not equal to 4.
+For the second test case A = 6, the answer is "YES" as sum of its proper divisors = 1 + 2 + 3 = 6, is equal to 6.
+
+public static void main(String[] args) {
+    // YOUR CODE GOES HERE
+    // Please take input and print output to standard input/output (stdin/stdout)
+    // DO NOT USE ARGUMENTS FOR INPUTS
+    // E.g. 'Scanner' for input & 'System.out' for output
+
+    Scanner scn = new Scanner(System.in);
+    int T = scn.nextInt();
+    for(int i = 1 ; i <= T ; i++) {
+        int sum = 0;
+        int input = scn.nextInt();
+        for (int j = 1; j < input; j++) {
+            if (input % j == 0) {
+                sum = sum + j;
+            }
+        }
+        if (sum == input) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }    
+}
